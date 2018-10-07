@@ -1,0 +1,31 @@
+	{%extends "base.html"%}
+	{%block content%}
+		<div class="col-sm-6">
+		<h1>{{title}}</h1>
+		
+		{%for obj in Object_list%}
+		<div class="row">
+		<div class="col-sm-12">
+		<div class="card" style="width: 18rem;">
+			{%if obj.image%}
+			<img class="card-img-top" src="{{obj.image.url}}" alt="Card image cap">
+			{%endif%}
+		  <div class="card-body">
+		    <h5 class="card-title">{{obj.title}}</h5>
+		    <h6 class="card-subtitle mb-6 text-muted">{{obj.timestamp|timesince}} ago</h6>
+		    <p class="card-text">{{obj.content|linebreaks|truncatechars:120}}</p>
+		    <a href="{{obj.get_absolute_url}}" class="btn btn-primary">Read More</a>
+		  </div>
+		</div>
+		<hr/>
+		</div>
+
+
+		</div>
+		{%endfor%}
+
+
+		</div>
+		
+
+	{%endblock content%}	
