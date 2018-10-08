@@ -1,0 +1,104 @@
+.body{
+	background-color: #181712;
+	text-decoration: none;
+}
+/*Main content In Every Block*/
+#main_content{
+	padding-top: 50px;
+	padding-left: 50px;
+}
+/*Controlling Damn Text*/
+.text-justify{
+	color:#91C7A9;
+	text-decoration: none;
+}
+.text-left{
+	color: #d6d2c7;
+	text-decoration: none;
+}
+.text-left a{
+	color: #d6d2c7;
+	text-decoration: none;
+}
+#textDate{
+	color: #b7911f;
+	text-decoration: none;
+}
+
+/*Intro and particle JS*/
+.text-center{
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#intro{
+	position: absolute;
+	text-decoration:none;
+}
+#writing{
+	color: white;
+	background-color: white;
+	text-decoration: none;
+}
+#particles-js{
+	height: 500px;
+}
+
+/*Navigation*/
+.navbar .nav{
+	background-color: #181712;
+}
+.fa.fa-navicon {
+  color:white;
+}
+.nav-link{
+	position: relative;
+	display: block;
+	margin: 0 10px;
+	text-decoration: none;
+	color:#E5DFC5;
+	text-transform: uppercase;
+	transition: .5s;
+}
+.nav-link:before{
+	content: '';
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	width: 8px;
+	height: 12px;
+	border:3px solid #E5DFC5;
+	border-width: 0 0 3px 3px;
+	transition: .5s;
+	opacity:0;
+}
+.nav-link:hover:before{
+	bottom: -8px;
+	left: -8px;
+	opacity: 1;
+}
+.nav-link:after{
+	content: '';
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 12px;
+	height: 12px;
+	border:3px solid #E5DFC5;
+	border-width:3px 3px 0 0;
+	transition: .5s;
+	opacity:0;
+}
+.nav-link:hover:after{
+	top: -8px;
+	right: -8px;
+	opacity: 1;
+	colo
+}
+.nav-link:hover{
+	color: white;
+	background: #FF652F;
+}
+
+

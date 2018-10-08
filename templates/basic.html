@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<title>Shoummo</title>
-
-	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
-
+	<meta charset="utf-8" />
 	{% load staticfiles %}
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href='{%static "css/home.css" %}'>
-    
-    <script type="text/javascript" src="{% static 'js/particles.js' %}"></script>
-    <script type="text/javascript">
-    	particlesJS.load('particles-js', '{% static 'js/particles.json' %}', function() {
-    	console.log('callback - particles.js config loaded');});
-    </script>
 
+	
 </head>
+
 <body class="body">
-	<div class="container-fluid">
+	<div class="container-fluid" style="min-height:95%; ">
 		<nav class="navbar sticky-top navbar-expand-lg" style="background-color: #181712">
 		  <a class="navbar-brand" href="#" style="color: #14A76C;">SHOUMMO</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,8 +23,8 @@
 
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
-		      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-		      <li class="nav-item"><a class="nav-link" href="/posts/">Blog</a></li>
+		      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+		      <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
 		      <li class="nav-item"><a class="nav-link" href="/education/">CV</a></li>
 		      <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
 		      <li class="nav-item"><a class="nav-link" href="/skills/">Skills</a></li>
@@ -40,23 +34,35 @@
 		  </div>
 		</nav>
 		<div class="row">
-			<div class="col-lg-12" id="particles-js">
-				<div id="intro">
-		            <div class="text-center" style="padding:10px;opacity: .8">
-		                <img src="{% static 'img/dp.jpg' %}" class="rounded-circle" width="200" height="200">
-		            </div>
-		            <div class="writing_intro">
-		            <header><h1 class="text-center">Hi ! I am Shoummo</h1></header>
-		            <p style="padding:10px;">
+			<div class="col-lg-10" id="main_content">
+				{% block content %}
+				{% endblock content%}
+			</div>
+			<div class="col-lg-2">
+				<div id="sidebar">
+					<div class="card text-white mb-3" style="max-width: 18rem;">
+					  <div class="card-header bg-dark">Header</div>
+					  <div class="card-body">
+					    <h5 class="card-title">Secondary card title</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					  </div>
+					</div>
+					<div class="card text-white mb-3" style="max-width: 18rem;">
+					  <div class="card-header bg-info">Header</div>
+					  <div class="card-body">
+					    <h5 class="card-title">Info card title</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					  </div>
+					</div>
+					<div class="card text-white mb-3" style="max-width: 18rem;">
+					  <div class="card-header bg-secondary">Header</div>
+					  <div class="card-body">
+					    <h5 class="card-title">Secondary card title</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					  </div>
+					</div>
 
-		                <h4 class="text-center">
-		                    My name is Sama-E-Shan Shoummo.I am currently Studying Mechnical Engineering in Chittagong University
-		                    of Engineering and Technology. I am interested in things like robotics,web-development,
-		                	game development,art,litarature,physics,CAD design and whatever I find interesting.
-		                </h4>
-		            </p>
-		            </div>
-	            </div>
+				</div>
 			</div>
 		</div>
 		<footer>
@@ -67,11 +73,15 @@
 				<a href="https://github.com/samaeen" target="blank"><img src="{% static 'img/icon/github.png' %}" height="30px" width="30px"></a> | 
 				<a href="https://www.linkedin.com/in/sama-e-shan-52281311a/" target="blank"><img src="{% static 'img/icon/linkedin.png' %}" height="30px" width="30px"></a>
 			</p>
+			<p class="text-center">Copyright By Shoummo</p>
+
 		</footer>	
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
 </body>
+
 </html>

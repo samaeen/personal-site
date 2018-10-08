@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^',include("posts.urls", namespace='posts')),
     url(r'^',include("personal.urls", namespace='personal')),
+    url(r'^',include("mlworkshop.urls", namespace='mlworkshop')),
 ]
 
 if settings.DEBUG:
