@@ -1,0 +1,78 @@
+{% extends "basic.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<div class="col-sm-1"></div>
+
+<div class="col-sm-10">
+	<div class="text-justify">
+  	<br>
+		Here are list of a few projects that I did.They may not be super interesting .But I definitely had fun doing them.
+		Surely this will not cover all of them.So please check out the links provided. 😄
+	</div>
+	<br>
+
+
+	<div style="border:3px solid #4286f4;border-width: 0 0 3px 0;">
+			<h3 class="text-left">Robotics and Embedded System</h3>
+	</div>
+	<div class="text-justify">
+  	<br>
+  		For different types of situations I have participated in different robotics competitions ,hackathons and done numerous projects.
+  		You will see them as breifly as possible in folowing section.
+	</div>
+	<br>
+	<div class="card"">
+	  <div class="card-body">
+	    <h5 class="card-title">Robots for competitions</h5>
+	    <p class="card-text">I attended in different line follower robot,maze solver and android control task based competitions.See the youtube video in the link to see them 🤖🤖</p>
+	    <a href="#" target="blank"><img src="{% static 'img/icon/youtube.png' %}" height="30px" width="40px"></a>|
+	    <a href="#" target="blank"><img src="{% static 'img/icon/github.png' %}" height="30px" width="40px"></a>
+	  </div>
+	</div>
+	<br>
+	<div class="card"">
+	  <div class="card-body">
+	    <h5 class="card-title">Hackathons and idea competitions</h5>
+	    <p class="card-text">I attended in different line follower robot,maze solver and android control task based competitions.See the youtube video in the link to see them </p>
+	      <ul class="list-group list-group-flush">
+		    <li class="list-group-item">Innovation to Industry</li>
+		    <li class="list-group-item">Stellar Hackathon</li>
+		</ul>
+	    <a href="#" target="blank"><img src="{% static 'img/icon/youtube.png' %}" height="30px" width="40px"></a>|
+	    <a href="#" target="blank"><img src="{% static 'img/icon/github.png' %}" height="30px" width="40px"></a>
+	  </div>
+	</div>
+	<br>
+	<div class="card"">
+	  <div class="card-body">
+	  	<h5 class="card-title">Embedded System Projects</h5>
+	  	<p class="card-text">There was a lot of embedded system projects .Could not show all of them.But tried as best as i could</p>
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item">Arduino and AVR</li>
+		    <li class="list-group-item">PIC microcontroller</li>
+		    <li class="list-group-item">RaspberryPI</li>
+		  </ul>
+	  </div>
+	</div>
+	<br>
+
+	<div style="border:3px solid #4286f4;border-width: 0 0 3px 0;">
+			<h3 class="text-left"> Image Processing Related</h3>
+	</div>
+	<br>
+	<div class="card"">
+	  <div class="card-body">
+	    <h5 class="card-title">OpenCV GUI</h5>
+	    <p class="card-text">This is GUI using opencv and pyqt4 framework that supports common functionalities like object edtection,facedetection,template matching,face detection,etc</p>
+	    <a href="#" target="blank"><img src="{% static 'img/icon/github.png' %}" height="30px" width="40px"></a>
+	  </div>
+	</div>
+
+</div>
+<div class="col-sm-1"></div>
+
+
+{% endblock %}
